@@ -7,7 +7,7 @@ const links = [
   { href: "#index", label: "Index" },
   { href: "#bashi", label: "Bashi" },
   { href: "#snappy", label: "Snappy" },
-  { href: "#data", label: "Data" },
+  { href: "#tasertag", label: "TaserTag" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -45,14 +45,6 @@ export function Nav() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="/resume/adam-manji-resume.pdf"
-              className="eyebrow inline-flex items-center gap-2 border hairline-strong px-3 py-2 hover:border-ember hover:text-ember transition-colors"
-            >
-              Resume <span aria-hidden>↗</span>
-            </a>
-          </li>
         </ul>
       </nav>
     </header>

@@ -5,8 +5,7 @@ const channels = [
   { label: "Email · Bashi", value: "adam@bashi.app", href: "mailto:adam@bashi.app" },
   { label: "Email · Snappy", value: "adam@snappyfantasy.com", href: "mailto:adam@snappyfantasy.com" },
   { label: "GitHub", value: "adammanji", href: "https://github.com/adammanji" },
-  { label: "LinkedIn", value: "/in/adam-manji", href: "https://www.linkedin.com/in/adam-manji" },
-  { label: "Resume", value: "PDF · Aug 2025", href: "/resume/adam-manji-resume.pdf" },
+  { label: "LinkedIn", value: "/in/adam-manji-b883681b2", href: "https://www.linkedin.com/in/adam-manji-b883681b2/" },
 ];
 
 export function Contact() {
@@ -26,10 +25,10 @@ export function Contact() {
             Get in <span className="font-display-italic">touch.</span>
           </h2>
           <p className="mt-6 max-w-md text-bone-2 md:text-lg">
-            Best ways to reach me: investor email at{" "}
-            <span className="text-ember">adam@bashi.app</span> for fintech,{" "}
-            <span className="text-ember">adam@snappyfantasy.com</span> for
-            sports, anything else at the Berkeley address.
+            For Bashi, write to{" "}
+            <span className="text-ember">adam@bashi.app</span>. For Snappy,
+            <span className="text-ember"> adam@snappyfantasy.com</span>.
+            Anything else, the Berkeley address is the easiest to reach.
           </p>
         </Reveal>
 

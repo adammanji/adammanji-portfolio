@@ -24,7 +24,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Adam Manji — Founder & engineer",
   description:
-    "Founder & engineer. Building in fintech and sports. Currently shipping Bashi (AI credit underwriting) and Snappy (real-money daily fantasy).",
+    "Founder & engineer. Building in fintech and sports. Currently shipping Bashi (AI credit underwriting) and Snappy (free-to-play, ranked fantasy sports).",
   metadataBase: new URL("https://adammanji.com"),
   openGraph: {
     title: "Adam Manji",

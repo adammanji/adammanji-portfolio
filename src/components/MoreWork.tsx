@@ -13,9 +13,9 @@ export function MoreWork() {
           <span className="eyebrow hidden md:block">§ IV</span>
         </Reveal>
 
-        <ul className="grid grid-cols-1 gap-px bg-ink-3 md:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-1 gap-px bg-ink-3 md:grid-cols-3">
           {more.map((p, i) => (
-            <Reveal as="li" key={p.slug} delay={i * 0.04}>
+            <Reveal as="li" key={p.slug} delay={i * 0.05}>
               <article className="flex h-full flex-col justify-between bg-ink p-6 transition-colors hover:bg-ink-2 md:p-7">
                 <div>
                   <div className="flex items-baseline justify-between">
@@ -36,20 +36,36 @@ export function MoreWork() {
                 </div>
                 <div className="mt-8 flex items-center justify-between border-t hairline-strong pt-4">
                   <span className="eyebrow">{p.status}</span>
-                  {p.repo && (
-                    <a
-                      href={p.repo}
-                      className="group inline-flex items-center gap-2 font-mono text-xs text-bone hover:text-ember transition-colors"
-                    >
-                      repo{" "}
-                      <span
-                        aria-hidden
-                        className="transition-transform group-hover:translate-x-1"
+                  <div className="flex items-center gap-4 font-mono text-xs">
+                    {p.repo && (
+                      <a
+                        href={p.repo}
+                        className="group inline-flex items-center gap-2 text-bone hover:text-ember transition-colors"
                       >
-                        ↗
-                      </span>
-                    </a>
-                  )}
+                        repo{" "}
+                        <span
+                          aria-hidden
+                          className="transition-transform group-hover:translate-x-1"
+                        >
+                          ↗
+                        </span>
+                      </a>
+                    )}
+                    {p.href && (
+                      <a
+                        href={p.href}
+                        className="group inline-flex items-center gap-2 text-bone hover:text-ember transition-colors"
+                      >
+                        live{" "}
+                        <span
+                          aria-hidden
+                          className="transition-transform group-hover:translate-x-1"
+                        >
+                          ↗
+                        </span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             </Reveal>

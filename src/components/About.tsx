@@ -16,11 +16,12 @@ export function About() {
           <p className="font-display text-3xl leading-[1.18] tracking-tight text-bone md:text-4xl lg:text-5xl">
             I studied{" "}
             <span className="font-display-italic text-bone-3">
-              data science at UC Berkeley
+              computer science at UC Berkeley
             </span>
-            , and I now spend my days writing the code, the pitch decks, and the
-            cold emails for two pre-seed companies that have nothing in common
-            on the surface — and almost everything in common underneath.
+            , and IB before that. I now spend my days writing the code, the pitch
+            decks, and the cold emails for two early-stage companies that have
+            nothing in common on the surface — and almost everything in common
+            underneath.
           </p>
         </Reveal>
 
@@ -36,12 +37,12 @@ export function About() {
           <Pillar
             num="ii."
             title="Sports"
-            body="Snappy is built on a contrarian bet — that the right form-factor for daily fantasy is short, head-to-head, and feels like a mobile game, not a spreadsheet. Live matchmaking, snake drafts, real-time scoring."
+            body="Snappy is built on a contrarian bet — that the right form-factor for fantasy is short, head-to-head, ranked, and feels like a mobile game, not a spreadsheet. Live matchmaking, snake drafts, real-time scoring."
           />
           <Pillar
             num="iii."
             title="The seam"
-            body="Both products live where messy real-world data meets product surface. That's the work I'm interested in: turning the hard, schema-less middle of a problem into something a normal person can use."
+            body="Both products live where messy real-world data meets a product surface. That's the work I'm interested in — turning the hard, schema-less middle of a problem into something a normal person can use."
           />
         </Reveal>
       </div>

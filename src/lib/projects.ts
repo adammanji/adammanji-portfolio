@@ -17,78 +17,69 @@ export const flagship: Project[] = [
     name: "Bashi",
     kind: "B2B fintech · AI underwriting",
     year: "2025—",
-    status: "Pre-seed · live",
+    status: "MVP · live",
     href: "https://bashi.app",
     blurb:
-      "An AI copilot for commercial credit underwriting. Ingests financial PDFs, extracts 51+ metrics, and generates 5-year, 3-statement projections plus a boardroom-ready credit memo.",
+      "An AI copilot for commercial credit underwriting. Reads financial PDFs, builds 5-year, 3-statement projections, and writes a memo a credit committee would actually read.",
   },
   {
     num: "02",
     slug: "snappy",
     name: "Snappy",
-    kind: "Consumer mobile · daily fantasy",
+    kind: "Consumer mobile · ranked fantasy",
     year: "2024—",
-    status: "Pre-seed · TestFlight",
+    status: "Beta · TestFlight",
     href: "https://snappyfantasy.com",
     blurb:
-      "Real-money daily fantasy built for short attention spans: NBA contests that resolve in a single quarter, MLB 1v1 head-to-head drafts that finish in three innings.",
+      "Ranked fantasy sports for short attention spans. Pick three real players from live games, go head-to-head, climb from Bronze to Legend. Free to play, no money.",
   },
 ];
 
 export const featured: Project[] = [
   {
     num: "03",
-    slug: "elections",
-    name: "American Demographics, 2004—2024",
-    kind: "Data analysis · published",
-    year: "2024",
-    status: "Writeup",
+    slug: "tasertag",
+    name: "TaserTag",
+    kind: "Hardware · multiplayer game",
+    year: "2022",
+    status: "Functional prototype",
     blurb:
-      "Six-cycle voter analysis using Census CPS and Edison exit polls. Headline finding: a 38-point shift in the Hispanic male margin between 2008 and 2024.",
+      "Real-life laser tag with custom infrared hardware, an iOS companion app, and a Python websocket server keeping the lobby honest. Three different stacks, one game, one weekend.",
   },
 ];
 
 export const more: Project[] = [
   {
     num: "04",
-    slug: "fantasy-duel",
-    name: "Fantasy-Duel",
-    kind: "Backend · API design",
-    year: "2025",
-    status: "Archived",
+    slug: "calhacks9",
+    name: "CalHacks 9",
+    kind: "Hackathon · NL → charts",
+    year: "2022",
+    status: "Hackathon submission",
     blurb:
-      "FastAPI + Postgres matchmaking service for 1v1 fantasy contests. Built the data model, auth, and migrations end-to-end before pivoting the idea into Snappy.",
+      "A natural-language interface for plotting physics. Users typed sentences like \"quantum harmonic oscillator\" and a fine-tuned Cohere classifier mapped them to chart actions. October 2022 — a month before ChatGPT shipped.",
+    repo: "https://github.com/adammanji/calhacks9",
   },
   {
     num: "05",
-    slug: "tasertag",
-    name: "TaserTag",
-    kind: "Hardware · IoT",
+    slug: "croadle",
+    name: "Croadle",
+    kind: "Side project · web game",
     year: "2022",
-    status: "Archived",
+    status: "Was deployed",
     blurb:
-      "Arduino-based competitive tag system. Embedded firmware, Python backend for match state, and a thin web frontend for scoring.",
+      "Wordle, but you're guessing today's UC Berkeley dining-hall menu. Flask, App Engine, a custom on-screen keyboard, and an admin page for the daily answer.",
   },
   {
     num: "06",
-    slug: "calhacks",
-    name: "CalHacks 9 & 10",
-    kind: "Hackathon · 36 hours",
-    year: "2022—2023",
-    status: "Submitted",
+    slug: "islamophobia",
+    name: "Documenting Islamophobia in Canada",
+    kind: "Research · long-form web",
+    year: "2024",
+    status: "Published",
     blurb:
-      "Two consecutive years competing at UC Berkeley's flagship hackathon. Sleep-deprived shipping, demo-day pressure, public repo.",
-    repo: "https://github.com/adammanji/calhacks10",
-  },
-  {
-    num: "07",
-    slug: "cal-dining",
-    name: "Cal-Dining",
-    kind: "Side project · scraping",
-    year: "2023",
-    status: "Archived",
-    blurb: "Berkeley dining-hall menu aggregation. Quick public utility built for fellow students.",
-    repo: "https://github.com/adammanji/Cal-Dining",
+      "A nine-section research site — country profile, media influence, legal challenges, surveillance, countermeasures — with an interactive Leaflet map and hand-built static pages. The non-code work in the inventory.",
+    href: "https://adammanji.github.io",
   },
 ];
 

@@ -7,7 +7,7 @@ export function Hero() {
   const reduce = useReducedMotion();
 
   const lineFx = (delay: number) => ({
-    initial: reduce ? false : { y: "120%", opacity: 0 },
+    initial: reduce ? false : { y: "110%", opacity: 0 },
     animate: { y: 0, opacity: 1 },
     transition: { duration: 1.05, delay, ease: [0.22, 1, 0.36, 1] as const },
   });
@@ -15,9 +15,8 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] overflow-hidden border-b hairline pt-24 md:pt-28"
+      className="relative min-h-[100svh] overflow-hidden border-b hairline pt-28 md:pt-32"
     >
-      {/* Background grid lines */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
         <div
           className="h-full w-full"
@@ -30,7 +29,6 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto grid max-w-[1600px] grid-cols-12 gap-x-6 px-6 pb-12 md:gap-x-10 md:px-10 lg:pb-20">
-        {/* Index marker */}
         <div className="col-span-12 mb-10 flex items-baseline justify-between md:mb-16">
           <motion.span
             className="eyebrow"
@@ -38,7 +36,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            № 00 — Adam Manji · Berkeley, CA
+            № 00 — Adam Manji · San Francisco, CA
           </motion.span>
           <motion.span
             className="eyebrow hidden md:block"
@@ -50,14 +48,13 @@ export function Hero() {
           </motion.span>
         </div>
 
-        {/* Massive headline */}
-        <h1 className="col-span-12 font-display text-[18vw] font-medium leading-[0.85] tracking-[-0.04em] md:text-[14vw] lg:text-[12vw]">
-          <span className="block overflow-hidden">
+        <h1 className="col-span-12 font-display text-[18vw] font-medium leading-[0.92] tracking-[-0.04em] md:text-[14vw] lg:text-[12vw]">
+          <span className="block overflow-hidden pb-[0.04em]">
             <motion.span className="block" {...lineFx(0.15)}>
               Founder
             </motion.span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="block overflow-hidden pb-[0.16em]">
             <motion.span
               className="block pl-[0.6em] font-display-italic text-bone-2"
               {...lineFx(0.3)}
@@ -67,9 +64,7 @@ export function Hero() {
           </span>
         </h1>
 
-        {/* Sub-row */}
         <div className="col-span-12 mt-8 grid grid-cols-12 gap-x-6 gap-y-8 md:mt-14 md:gap-x-10">
-          {/* Headshot */}
           <motion.div
             className="col-span-5 md:col-span-3 lg:col-span-2"
             initial={reduce ? false : { opacity: 0, y: 30 }}
@@ -89,7 +84,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Tagline + meta */}
           <div className="col-span-7 flex flex-col justify-between gap-8 md:col-span-9 lg:col-span-10">
             <motion.p
               className="max-w-2xl text-balance font-display text-2xl leading-[1.15] tracking-tight text-bone md:text-3xl lg:text-4xl"
@@ -97,15 +91,16 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.65 }}
             >
-              Building in fintech and sports — a B2B AI underwriting platform
+              Building in fintech and sports — an AI copilot for commercial
+              credit underwriting
               <span className="font-display-italic text-bone-3">
                 {" "}(Bashi){" "}
               </span>
-              and a real-money daily-fantasy app
+              and a free-to-play, ranked fantasy app
               <span className="font-display-italic text-bone-3">
                 {" "}(Snappy){" "}
               </span>
-              currently in pre-seed.
+              currently in beta.
             </motion.p>
 
             <motion.div
@@ -115,9 +110,9 @@ export function Hero() {
               transition={{ duration: 1, delay: 0.85 }}
             >
               <div className="grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-3 md:grid-cols-4">
-                <Stat label="Based" value="Berkeley, CA" />
-                <Stat label="Education" value="UC Berkeley · Data Science" />
-                <Stat label="Shipping" value="2 startups, pre-seed" />
+                <Stat label="Based" value="San Francisco, CA" />
+                <Stat label="Education" value="UC Berkeley · CS · IB" />
+                <Stat label="Shipping" value="Bashi · Snappy" />
                 <Stat label="Email" value="adam@bashi.app" />
               </div>
 

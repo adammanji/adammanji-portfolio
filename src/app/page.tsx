@@ -4,7 +4,7 @@ import { About } from "@/components/About";
 import { Index } from "@/components/Index";
 import { BashiFeature } from "@/components/BashiFeature";
 import { SnappyFeature } from "@/components/SnappyFeature";
-import { ElectionsFeature } from "@/components/ElectionsFeature";
+import { TaserTagFeature } from "@/components/TaserTagFeature";
 import { MoreWork } from "@/components/MoreWork";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -19,7 +19,7 @@ export default function Home() {
         <Index />
         <BashiFeature />
         <SnappyFeature />
-        <ElectionsFeature />
+        <TaserTagFeature />
         <MoreWork />
         <Contact />
       </main>
