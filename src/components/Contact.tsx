@@ -16,7 +16,7 @@ export function Contact() {
     >
       <div className="mx-auto grid max-w-[1600px] grid-cols-12 gap-x-6 px-6 md:gap-x-10 md:px-10">
         <Reveal className="col-span-12 mb-12 flex items-baseline justify-between md:mb-20">
-          <span className="eyebrow">§ V — colophon</span>
+          <span className="eyebrow">§ VI — colophon</span>
           <span className="eyebrow">Contact</span>
         </Reveal>
 

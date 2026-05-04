@@ -6,6 +6,7 @@ import { BashiFeature } from "@/components/BashiFeature";
 import { SnappyFeature } from "@/components/SnappyFeature";
 import { TaserTagFeature } from "@/components/TaserTagFeature";
 import { MoreWork } from "@/components/MoreWork";
+import { Coursework } from "@/components/Coursework";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <SnappyFeature />
         <TaserTagFeature />
         <MoreWork />
+        <Coursework />
         <Contact />
       </main>
       <Footer />

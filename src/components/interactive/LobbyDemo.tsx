@@ -13,8 +13,8 @@ type Slot = {
 const SEED: Slot[] = [
   { name: "P1 · adam", team: "red", hp: 5, status: "alive" },
   { name: "P2 · troy", team: "red", hp: 4, status: "alive" },
-  { name: "P3 · nidhi", team: "blue", hp: 5, status: "alive" },
-  { name: "P4 · jenna", team: "blue", hp: 3, status: "alive" },
+  { name: "P3 · preston", team: "blue", hp: 5, status: "alive" },
+  { name: "P4 · noah", team: "blue", hp: 3, status: "alive" },
 ];
 
 export function LobbyDemo() {

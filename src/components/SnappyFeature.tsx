@@ -46,7 +46,7 @@ export function SnappyFeature() {
           <span className="font-mono text-xs text-bone-3">№ 02</span>
           <span className="eyebrow">A case study</span>
           <span className="font-mono text-xs text-bone-3 hidden md:inline">
-            2024—present · beta · TestFlight
+            2025—present · beta · TestFlight
           </span>
         </Reveal>
 
@@ -104,12 +104,12 @@ export function SnappyFeature() {
           </Reveal>
 
           <Reveal className="col-span-12 md:col-span-7" delay={0.2}>
-            <div className="grid grid-cols-3 items-end gap-3 md:gap-5">
+            <div className="grid grid-cols-3 items-end gap-4 md:gap-6">
               <Phone src="/snappy/home_screen.png" label="Home" />
-              <Phone src="/snappy/draft_screen.png" label="Draft" featured />
+              <Phone src="/snappy/draft_screen.png" label="Draft" />
               <Phone src="/snappy/live_match.png" label="Live" />
             </div>
-            <p className="mt-3 font-mono text-[10px] text-bone-3 uppercase tracking-wider">
+            <p className="mt-6 font-mono text-[10px] text-bone-3 uppercase tracking-wider md:mt-8">
               fig 02 — iOS, current build
             </p>
           </Reveal>
@@ -185,29 +185,19 @@ export function SnappyFeature() {
   );
 }
 
-function Phone({
-  src,
-  label,
-  featured,
-}: {
-  src: string;
-  label: string;
-  featured?: boolean;
-}) {
+function Phone({ src, label }: { src: string; label: string }) {
   return (
-    <figure
-      className={`group relative aspect-[9/19] overflow-hidden bg-transparent ${
-        featured ? "translate-y-[-1.5rem] md:translate-y-[-2.5rem]" : ""
-      }`}
-    >
-      <Image
-        src={src}
-        alt={`Snappy ${label} screen`}
-        fill
-        sizes="(max-width: 768px) 33vw, 240px"
-        className="object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-      />
-      <figcaption className="eyebrow absolute -bottom-6 left-0 right-0 text-center md:-bottom-8">
+    <figure className="group flex flex-col items-center">
+      <div className="relative aspect-[805/1606] w-full overflow-hidden">
+        <Image
+          src={src}
+          alt={`Snappy ${label} screen`}
+          fill
+          sizes="(max-width: 768px) 30vw, 220px"
+          className="object-contain object-bottom transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+      </div>
+      <figcaption className="eyebrow mt-3 text-center md:mt-4">
         {label}
       </figcaption>
     </figure>

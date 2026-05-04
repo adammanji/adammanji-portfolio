@@ -18,10 +18,10 @@ export function About() {
             <span className="font-display-italic text-bone-3">
               computer science at UC Berkeley
             </span>
-            , and IB before that. I now spend my days writing the code, the pitch
-            decks, and the cold emails for two early-stage companies that have
-            nothing in common on the surface — and almost everything in common
-            underneath.
+            , by way of an International Baccalaureate diploma. I now spend my
+            days writing the code, the pitch decks, and the cold emails for two
+            early-stage companies that have nothing in common on the surface —
+            and almost everything in common underneath.
           </p>
         </Reveal>
 

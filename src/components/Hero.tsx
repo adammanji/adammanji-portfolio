@@ -111,7 +111,7 @@ export function Hero() {
             >
               <div className="grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-3 md:grid-cols-4">
                 <Stat label="Based" value="San Francisco, CA" />
-                <Stat label="Education" value="UC Berkeley · CS · IB" />
+                <Stat label="Education" value="UC Berkeley · Computer Science" />
                 <Stat label="Shipping" value="Bashi · Snappy" />
                 <Stat label="Email" value="adam@bashi.app" />
               </div>
