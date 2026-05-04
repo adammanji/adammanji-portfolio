@@ -22,7 +22,7 @@ export function LobbyDemo() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { margin: "-10%" });
   const [slots, setSlots] = useState(SEED);
-  const [event, setEvent] = useState<string>("game.started · ttd 3:00");
+  const [event, setEvent] = useState<string>("game.armed · pads.calibrated · ttd 3:00");
 
   useEffect(() => {
     if (reduce || !inView) return;
@@ -31,12 +31,12 @@ export function LobbyDemo() {
         const i = Math.floor(Math.random() * prev.length);
         const s = prev[i];
         if (s.hp <= 1) {
-          setEvent(`${s.name} tagged out · ${flip(s.team)} +1`);
+          setEvent(`${s.name} eliminated · ${flip(s.team)} +1 · respawn 5s`);
           return prev.map((p, idx) =>
             idx === i ? { ...p, hp: 5, status: "respawning" } : p,
           );
         }
-        setEvent(`ir.hit · ${flip(s.team)} → ${s.name} (-1)`);
+        setEvent(`ir.hit · ${flip(s.team)} → ${s.name} · tens.fire (-1 hp)`);
         return prev.map((p, idx) =>
           idx === i ? { ...p, hp: p.hp - 1, status: "alive" } : p,
         );

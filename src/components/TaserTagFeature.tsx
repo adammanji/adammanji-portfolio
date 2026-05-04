@@ -4,6 +4,8 @@ import { LobbyDemo } from "./interactive/LobbyDemo";
 const stack = [
   "Arduino · C++",
   "IR transmit / receive",
+  "TENS unit · teardown",
+  "Relay-driven shock trigger",
   "Python · Flask",
   "Flask-SocketIO",
   "iOS · Swift",
@@ -12,16 +14,20 @@ const stack = [
 
 const beats = [
   {
-    head: "The hardware",
-    body: "Each gun is an Arduino-driven IR emitter wired to a trigger and a chest-mounted IR receiver. A hit registers as a coded pulse the receiver decodes — not just \"something flashed,\" but which player fired. The protocol gets you team-deathmatch instead of chaos.",
+    head: "The thesis",
+    body: "Laser tag already exists. The whole game is solved at the toy-store level: photons hit a vest, a buzzer beeps, you keep playing. We wanted stakes that the body actually noticed — something between the photon and the score. The shock is what made it a game we actually wanted to play.",
   },
   {
-    head: "The server",
-    body: "A Python Flask + SocketIO server runs the room. It tracks lobbies, teams, hit-points, and game modes — team deathmatch and capture-the-flag. Every IR event from every gun routes through it, so the truth of the game lives in one place.",
+    head: "The teardown",
+    body: "Each player wears an IR receiver wired to a torn-down TENS unit — the over-the-counter electrode-pad device physiotherapists use for muscle stim. The Arduino sits between them. When the IR sensor catches a coded pulse, the Arduino briefly closes a relay and the TENS unit fires through the pads on your forearm. Current-limited and within consumer-device specs — sharp, not dangerous.",
   },
   {
-    head: "The phone",
-    body: "Each player carries an iOS app — health bar, scoreboard, respawn timer, ammo counter. The phone is the HUD. The Arduino is the gun. The server is the referee. Three different stacks. One game.",
+    head: "The referee",
+    body: "A Flask + SocketIO server runs the room: lobbies, teams, hit-points, modes (team-deathmatch and capture-the-flag). Every IR event routes through the server before it can fire any TENS unit, so the rules of the game live in one place — and the body trusts that singularity.",
+  },
+  {
+    head: "The HUD",
+    body: "Each player carries an iOS HUD — health, scoreboard, respawn timer. The phone is what you check between rounds. The Arduino is what carries the shot. The pads are what make you remember it. Three stacks, one feedback loop, one stinging forearm.",
   },
 ];
 
@@ -41,13 +47,15 @@ export function TaserTagFeature() {
         </Reveal>
 
         <Reveal className="col-span-12 md:col-span-8">
-          <span className="eyebrow">Hardware × software × phone</span>
+          <span className="eyebrow">Real stakes for a fake game</span>
           <h2 className="mt-3 font-display text-7xl leading-[0.92] tracking-tight md:text-9xl">
             TaserTag<span className="font-display-italic text-ember">.</span>
           </h2>
           <p className="mt-6 max-w-2xl font-display-italic text-2xl leading-tight text-bone-2 md:text-3xl">
-            Real-life laser tag. Custom IR hardware on the gun, Python
-            websockets on the server, an iOS app for the HUD.
+            Laser tag already exists. We tore apart TENS units, wired the
+            electrode pads through Arduino relays, and built a tag game where
+            getting hit means getting{" "}
+            <span className="text-ember">shocked.</span>
           </p>
         </Reveal>
 
@@ -55,9 +63,9 @@ export function TaserTagFeature() {
           className="col-span-12 mt-10 flex flex-col items-start justify-end gap-4 md:col-span-4 md:mt-0 md:items-end"
           delay={0.1}
         >
-          <span className="eyebrow">Three stacks · one game</span>
+          <span className="eyebrow">Three stacks · one game · one shock</span>
           <div className="flex flex-col gap-2 text-right font-mono text-xs text-bone">
-            <span><span className="text-ember">◇</span> Arduino · C++</span>
+            <span><span className="text-ember">◇</span> Arduino · IR · TENS</span>
             <span><span className="text-ember">◇</span> Python · WebSockets</span>
             <span><span className="text-ember">◇</span> iOS · Swift</span>
           </div>
@@ -70,25 +78,25 @@ export function TaserTagFeature() {
         >
           <div className="md:col-span-12 grid grid-cols-3 items-stretch gap-px bg-ink-3">
             <Node
-              tag="01 · gun"
+              tag="01 · rig"
               title="Arduino"
-              sub="IR emitter · trigger · receiver chest"
+              sub="IR emitter / receiver · TENS relay · pads on forearm"
             />
             <Node
-              tag="02 · server"
+              tag="02 · referee"
               title="Flask + SocketIO"
-              sub="lobby · teams · hit logic"
+              sub="lobby · teams · hit logic · shock authorization"
               center
             />
             <Node
               tag="03 · HUD"
               title="iOS app"
-              sub="health · scoreboard · respawn"
+              sub="health · scoreboard · respawn timer"
             />
           </div>
           <div className="md:col-span-12 -mt-2 hidden items-center justify-between font-mono text-[10px] text-bone-3 md:flex">
             <span>↳ IR pulse</span>
-            <span>↳ websocket event</span>
+            <span>↳ websocket event · relay fire</span>
             <span>↳ HUD update</span>
           </div>
         </Reveal>
@@ -97,7 +105,7 @@ export function TaserTagFeature() {
         <Reveal className="col-span-12 mt-12 md:mt-16 md:col-span-7" delay={0.15}>
           <LobbyDemo />
           <p className="mt-3 font-mono text-[10px] text-bone-3 uppercase tracking-wider">
-            fig 01 — Lobby state, simulated
+            fig 01 — Lobby state, simulated. Real games include a real flinch.
           </p>
         </Reveal>
 
@@ -108,14 +116,16 @@ export function TaserTagFeature() {
           <span className="eyebrow">What it taught me</span>
           <p className="text-base leading-relaxed text-bone-2 md:text-lg">
             Three stacks talking to each other in real time is the most
-            humbling thing you can build. Every clock skew, every dropped
-            packet, every flaky IR hit becomes a bug surfaced through whichever
-            layer is loudest. You learn to instrument before you optimize.
+            humbling thing you can build — every clock skew, every dropped
+            packet, every flaky IR hit, every misfired relay surfaces through
+            whichever layer is loudest. You learn to instrument before you
+            optimize. You also learn that physical feedback fixes a lot of
+            UX bugs.
           </p>
         </Reveal>
 
         {/* Narrative beats */}
-        <div className="col-span-12 mt-20 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
+        <div className="col-span-12 mt-20 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-4">
           {beats.map((b, i) => (
             <Reveal key={b.head} delay={0.05 * i}>
               <div className="border-t hairline-strong pt-5">

@@ -40,11 +40,11 @@ export const featured: Project[] = [
     num: "03",
     slug: "tasertag",
     name: "TaserTag",
-    kind: "Hardware · multiplayer game",
+    kind: "Hardware · physical-stakes tag",
     year: "2022",
     status: "Functional prototype",
     blurb:
-      "Real-life laser tag with custom infrared hardware, an iOS companion app, and a Python websocket server keeping the lobby honest. Three different stacks, one game, one weekend.",
+      "Tag, but with consequences. We tore apart consumer TENS units and wired their electrode pads through Arduino relays — get hit by an IR pulse, take a real shock. An iOS HUD and a Python websocket server keep the lobby honest.",
   },
 ];
 
