@@ -35,7 +35,13 @@ export function A({
   const external = /^(https?:|mailto:)/.test(href);
   if (external) {
     return (
-      <a href={href} className={`link ${className}`}>
+      <a
+        href={href}
+        className={`link ${className}`}
+        {...(href.startsWith("http")
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
         {children}
       </a>
     );

@@ -16,10 +16,10 @@ export function Footer() {
           <a className="btn btn-solid" href={`mailto:${site.email}`}>
             Email {site.email}
           </a>
-          <a className="link ui" href={site.linkedin}>
+          <a className="link ui" href={site.linkedin} target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a className="link ui" href={site.github}>
+          <a className="link ui" href={site.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </div>
