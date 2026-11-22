@@ -14,7 +14,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/adam-manji-b883681b2/",
   resumePdf: "/adam-manji-resume.pdf",
   description:
-    "Adam Manji is the co-founder and CTO of Bashi, a credit intelligence platform for lenders in emerging markets. Before that he built and shipped Snappy, a ranked fantasy-sports app.",
+    "Adam Manji is the co-founder and CTO of Bashi, a credit intelligence platform for lenders in emerging markets. He also built and runs Snappy, a ranked fantasy-basketball game.",
 };
 
 export const nav = [
@@ -28,7 +28,7 @@ export const nav = [
 export const home = {
   lede: "I'm the co-founder and CTO of Bashi, a credit intelligence platform for lenders in emerging markets. I led the build, run the engineering team, and own security and compliance. It's in a production pilot with a regulated lender in Latin America.",
   second:
-    "Before Bashi I designed, built and shipped Snappy, a ranked fantasy-sports app for iOS, on my own.",
+    "I also designed and built Snappy, a ranked fantasy-basketball game, on my own, and relaunched it for the NBA season in November 2026.",
 };
 
 export type RecordRow = {
@@ -51,10 +51,10 @@ export const record: RecordRow[] = [
     href: "/work/bashi",
   },
   {
-    years: "2025 – 2026",
+    years: "2025 – now",
     name: "Snappy",
     role: "Founder and CEO",
-    note: "Shipped to beta",
+    note: "Relaunched Nov 2026",
     href: "/work/snappy",
   },
   {
@@ -154,41 +154,41 @@ export const bashi = {
 export const snappy = {
   title: "Snappy",
   summary:
-    "Ranked fantasy sports for iOS. Draft three real players from games happening right now, play one opponent head to head, and climb a ladder from Bronze to Legend. Free to play.",
+    "Ranked fantasy basketball. Draft three real players, play one opponent over a single live quarter, and climb a ladder from Bronze to Legend. Free to play.",
   facts: [
-    { label: "Role", value: "Founder, CEO and sole engineer" },
-    { label: "When", value: "Sep 2025 to May 2026" },
+    { label: "Role", value: "Founder and sole engineer" },
+    { label: "When", value: "Sep 2025 to now" },
     { label: "Where", value: "San Francisco" },
-    { label: "Sports", value: "NBA and MLB" },
-    { label: "Status", value: "Shipped to beta, now paused" },
+    { label: "Sport", value: "NBA" },
+    { label: "Status", value: "Rebuilt and relaunched, Nov 2026" },
   ],
   link: { href: "https://snappyfantasy.com", label: "snappyfantasy.com" },
   homeBlurb:
-    "Daily fantasy asks for an evening and a spreadsheet. Snappy is a match you can finish in about half an hour: a 20-second draft, live scoring, and a rank on the line.",
+    "Daily fantasy asks for an evening and a spreadsheet. Snappy is a match you can finish in one quarter: a 20-second draft, live scoring, and a rank on the line.",
   intro: [
     "Daily fantasy is built for people who will study a slate for an evening. I wanted the version you can play while a game is on: short, head to head, ranked, and free.",
-    "I designed and built all of it myself, including the Python backend, the React Native app, the admin tools and the website, and shipped it to a TestFlight beta. I paused it in May 2026 to work on Bashi full time.",
+    "I designed and built all of it myself and shipped the first version to a TestFlight beta, then paused it in May 2026 to work on Bashi full time. In November 2026 I rebuilt it for the NBA season: a new data layer, a new game engine, a new app and a new look. The daily five is playable on the website now, and the iOS app is next.",
   ],
   /* A match, in order. */
   match: [
     {
       step: "Match",
       detail:
-        "Tap Battle and get paired with someone at your rating. If nobody is around after 90 seconds, a bot takes the seat.",
+        "Pick one of tonight's games and get paired with an opponent near your rating, usually within a few seconds. Or send a friend a six-character code.",
     },
     {
       step: "Draft",
       detail:
-        "Snake-draft three players from games in progress. You have 20 seconds a pick.",
+        "Take turns drafting three players from the quarter about to start. You have 20 seconds a pick.",
     },
     {
       step: "Compete",
       detail:
-        "Every play scores live. An NBA contest covers one quarter and takes about 30 minutes. An MLB contest covers three innings.",
+        "Your three players face theirs in three lanes, scored live over one quarter. Tap any card to see the stat line behind its score.",
     },
   ],
   numbers: [
-    { value: "1 v 1", label: "every contest is head to head" },
+    { value: "1 v 1", label: "every duel is head to head" },
     { value: "20 s", label: "on the clock for each pick" },
     { value: "8", label: "divisions, Bronze to Legend" },
     { value: "$0", label: "to play" },
@@ -196,11 +196,15 @@ export const snappy = {
   areas: [
     {
       title: "Real-time systems",
-      body: "The hard part is that the game runs on live sports. I built the data ingestion from league feeds, in-game scoring for each format, ranked matchmaking, and a Glicko-2 rating ladder.",
+      body: "The hard part is that the game runs on live sports. The rebuilt data layer stores every play as it arrives and derives each player's quarter from the play-by-play, then checks itself against the official box score every night. On top of it sit ranked matchmaking, live scoring and a Glicko-2 ladder.",
+    },
+    {
+      title: "Two ways to play",
+      body: "Duels are the ranked one-on-one game in the app. The daily five is a lighter contest that also runs in the browser: five players, a $15 budget, and one crown a night.",
     },
     {
       title: "Shipping it properly",
-      body: "The backend runs in production with automated tests and monitoring behind it. Before pausing I ran a full security review and fixed every critical issue it found.",
+      body: "The backend runs in production with more than a thousand automated tests and monitoring behind it. I ran a full security review of the new API and fixed what it found.",
     },
     {
       title: "The business",
@@ -213,21 +217,20 @@ export const snappy = {
     "FastAPI",
     "PostgreSQL",
     "WebSockets",
-    "Auth0",
+    "Sign in with Apple",
     "Glicko-2",
     "Railway",
-    "EAS and TestFlight",
   ],
   screens: [
-    { src: "/snappy/home_screen.png", label: "Home" },
-    { src: "/snappy/draft_screen.png", label: "Draft" },
-    { src: "/snappy/live_match.png", label: "Live match" },
-    { src: "/snappy/nba_hub.png", label: "NBA hub" },
-    { src: "/snappy/nba_tracker.png", label: "NBA tracker" },
-    { src: "/snappy/mlb_atbat.png", label: "MLB at-bat" },
+    { src: "/snappy/home.png", label: "Tonight's games" },
+    { src: "/snappy/draft.png", label: "Draft" },
+    { src: "/snappy/live.png", label: "Live quarter" },
+    { src: "/snappy/stat_line.png", label: "Stat line" },
+    { src: "/snappy/won.png", label: "Result" },
+    { src: "/snappy/daily_five.png", label: "Daily five" },
   ],
   closing:
-    "Snappy is paused, not shut down. The site is still up at snappyfantasy.com.",
+    "Tonight's daily five is open at snappyfantasy.com.",
 };
 
 export type Project = {
@@ -346,7 +349,7 @@ export const earlier = [
 export const about = {
   bio: [
     "I grew up in Toronto and started programming in tenth grade. I did the International Baccalaureate Diploma at Upper Canada College, where I started a club to teach other students to code, then moved to California for a computer science degree at UC Berkeley and graduated in 2025.",
-    "After graduating I started Snappy, a ranked fantasy-sports app, and built and shipped it alone. Since May 2026 I've been co-founder and CTO of Bashi, where I lead the engineering team building a credit intelligence platform for lenders in emerging markets.",
+    "After graduating I started Snappy, a ranked fantasy-basketball game, and built it alone. Since May 2026 I've been co-founder and CTO of Bashi, where I lead the engineering team building a credit intelligence platform for lenders in emerging markets.",
     "I like the part of a problem where messy real-world data has to become something a person can trust and use, whether that's a box score arriving one play at a time or a scanned balance sheet.",
   ],
   outside: [

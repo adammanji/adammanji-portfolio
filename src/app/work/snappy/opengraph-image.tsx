@@ -7,6 +7,6 @@ export const contentType = "image/png";
 export default function Image() {
   return renderOg({
     title: "Snappy",
-    subtitle: "Ranked fantasy sports for iOS. Built and shipped by Adam Manji.",
+    subtitle: "Ranked fantasy basketball. Built and shipped by Adam Manji.",
   });
 }

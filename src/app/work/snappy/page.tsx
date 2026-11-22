@@ -30,7 +30,7 @@ export default function SnappyPage() {
         <ul className="flex snap-x snap-mandatory scroll-px-(--gutter) gap-3 md:grid md:grid-cols-6 md:gap-4">
           {snappy.screens.map((s) => (
             <li key={s.src} className="w-[44vw] shrink-0 snap-start md:w-auto">
-              <div className="relative aspect-[805/1606] w-full overflow-hidden rounded-xl border-[1.5px] border-ink bg-night md:rounded-2xl">
+              <div className="relative aspect-[400/798] w-full overflow-hidden rounded-xl border-[1.5px] border-ink bg-paper md:rounded-2xl">
                 <Image
                   src={s.src}
                   alt={`Snappy app screen: ${s.label}`}

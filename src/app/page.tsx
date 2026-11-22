@@ -118,7 +118,7 @@ export default function Home() {
       {/* Snappy */}
       <section className="mt-8 grid items-center gap-x-12 gap-y-10 rounded-sm bg-paper-2 px-6 py-10 md:grid-cols-[1.1fr_1fr] md:px-14 md:py-16">
         <div>
-          <p className="label">2025 to 2026. Founder and sole engineer.</p>
+          <p className="label">2025 to now. Founder and sole engineer.</p>
           <h2 className="mt-2 text-4xl md:text-6xl">Snappy</h2>
           <p className="mt-5 max-w-[34rem] text-xl leading-normal">
             {snappy.homeBlurb}
@@ -133,7 +133,7 @@ export default function Home() {
           {snappy.screens.slice(0, 3).map((s) => (
             <div
               key={s.src}
-              className="relative aspect-[805/1606] w-1/3 max-w-40 overflow-hidden rounded-xl border-[1.5px] border-ink bg-night md:rounded-2xl"
+              className="relative aspect-[400/798] w-1/3 max-w-40 overflow-hidden rounded-xl border-[1.5px] border-ink bg-paper md:rounded-2xl"
             >
               <Image
                 src={s.src}
