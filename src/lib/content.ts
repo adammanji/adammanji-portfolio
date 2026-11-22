@@ -244,7 +244,7 @@ export type Project = {
 export const taserTag: Project = {
   slug: "tasertag",
   name: "TaserTag",
-  year: "2022",
+  year: "2025",
   kind: "Hardware game",
   blurb:
     "Laser tag where getting hit gives you a mild electric shock. A working prototype built with friends at Berkeley.",
@@ -263,7 +263,7 @@ export const projects: Project[] = [
     year: "2026",
     kind: "Sports modelling",
     blurb:
-      "A pipeline for filling out an NCAA bracket. XGBoost win probabilities, calibrated and blended with Vegas lines, feed a 100,000-run Monte Carlo that picks the bracket most likely to finish top three in a 40-person pool.",
+      "A pipeline for filling out an NCAA bracket. XGBoost win probabilities, calibrated and blended with Vegas lines, feed a 100,000-run Monte Carlo that picks the bracket most likely to finish top three in a 40-person pool. It won the pool.",
     stack: ["Python", "XGBoost", "scikit-learn"],
   },
   {
