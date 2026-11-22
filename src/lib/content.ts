@@ -26,7 +26,7 @@ export const nav = [
 ];
 
 export const home = {
-  lede: "I'm the co-founder and CTO of Bashi, a credit intelligence platform for lenders in emerging markets. I led the build, run a four-engineer team, and own security and compliance. It's in a production pilot with a regulated lender in Latin America.",
+  lede: "I'm the co-founder and CTO of Bashi, a credit intelligence platform for lenders in emerging markets. I led the build, run the engineering team, and own security and compliance. It's in a production pilot with a regulated lender in Latin America.",
   second:
     "Before Bashi I designed, built and shipped Snappy, a ranked fantasy-sports app for iOS, on my own.",
 };
@@ -88,7 +88,6 @@ export const bashi = {
     { label: "Role", value: "Co-founder and CTO" },
     { label: "When", value: "May 2026 to now" },
     { label: "Where", value: "San Francisco and London" },
-    { label: "Team", value: "Four engineers" },
     { label: "Status", value: "Production pilot, Latin America" },
   ],
   link: { href: "https://bashi.app", label: "bashi.app" },
@@ -140,7 +139,7 @@ export const bashi = {
     },
     {
       title: "The team",
-      body: "I lead four engineers through a pull-request workflow with CI and code review, and I own the roadmap, architecture decisions and production releases.",
+      body: "I lead the engineering team through a pull-request workflow with CI and code review, and I own the roadmap, architecture decisions and production releases.",
     },
     {
       title: "Customers and investors",
@@ -377,7 +376,7 @@ export const resume = {
       bullets: [
         "Led the build of the platform for a regulated first customer on Django, PostgreSQL, and AWS with infrastructure as code and CI/CD; built the core product: document ingestion, LLM-based financial spreading and reconciliation, borrower diligence, analyst review, and credit-memo generation, backed by an evaluation program to measure accuracy.",
         "Own security and compliance: run the SOC 2 program, penetration testing and remediation, and the multi-tenancy, access-control, audit-trail, and data-protection design.",
-        "Lead a four-engineer team through a PR-based workflow with CI and code review, own the roadmap, architecture decisions, and production releases, and represent the technical side of the company with customers, partners, and investors, from RFP responses to pilot scoping and technical due diligence.",
+        "Lead the engineering team through a PR-based workflow with CI and code review, own the roadmap, architecture decisions, and production releases, and represent the technical side of the company with customers, partners, and investors, from RFP responses to pilot scoping and technical due diligence.",
       ],
     },
     {
