@@ -320,7 +320,7 @@ export const projects: Project[] = [
     year: "2024",
     kind: "Recommender",
     blurb:
-      "Recommends lesser-known 19th-century Russian novels from the books you already like. It refuses to suggest War and Peace, Anna Karenina, Crime and Punishment or The Brothers Karamazov.",
+      "A recommender for 19th-century Russian literature. Tell it which books you already like and it finds lesser-known novels in the same vein, past the famous titles everyone has already been told to read.",
     stack: ["Python", "OpenAI API"],
   },
   {
@@ -352,7 +352,7 @@ export const about = {
   outside: [
     "I play basketball every week and watch every Formula 1 race.",
     "I read 19th-century Russian novels and built a recommender to find more of them.",
-    "I longboard small waves, badly.",
+    "I surf, on a longboard.",
     "I speak English and French.",
   ],
   education: [
