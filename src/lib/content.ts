@@ -258,6 +258,16 @@ export const taserTag: Project = {
 
 export const projects: Project[] = [
   {
+    slug: "surge",
+    name: "Surge",
+    year: "2026",
+    kind: "Vibecon SF 2026",
+    blurb:
+      "AI agents that run the front office for small trade shops: taking incoming jobs, forecasting demand, dispatching crews, and referring work a shop can't take to one that can. The agents were trained in reinforcement-learning environments built from real-world data. Built in 20 hours.",
+    stack: ["AI agents", "Reinforcement learning"],
+    links: [{ href: "https://garza-surge.emergent.host/", label: "Visit" }],
+  },
+  {
     slug: "madness",
     name: "Madness 2026",
     year: "2026",
