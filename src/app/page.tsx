@@ -133,7 +133,7 @@ export default function Home() {
           {snappy.screens.slice(0, 3).map((s) => (
             <div
               key={s.src}
-              className="relative aspect-[400/798] w-1/3 max-w-40 overflow-hidden rounded-xl border-[1.5px] border-ink bg-paper md:rounded-2xl"
+              className="relative aspect-[400/878] w-1/3 max-w-40 overflow-hidden rounded-xl border-[1.5px] border-ink bg-paper md:rounded-2xl"
             >
               <Image
                 src={s.src}
