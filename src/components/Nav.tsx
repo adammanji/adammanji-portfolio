@@ -1,52 +1,44 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-const links = [
-  { href: "#index", label: "Index" },
-  { href: "#bashi", label: "Bashi" },
-  { href: "#snappy", label: "Snappy" },
-  { href: "#tasertag", label: "TaserTag" },
-  { href: "#contact", label: "Contact" },
-];
+import { usePathname } from "next/navigation";
+import { nav, site } from "@/lib/content";
 
 export function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const pathname = usePathname();
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "backdrop-blur-md bg-ink/70 border-b hairline" : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-10">
+    <header className="no-print border-b border-rule">
+      <div className="sheet flex flex-col gap-x-8 gap-y-2 py-4 md:flex-row md:items-center md:justify-between md:py-5">
         <Link
-          href="#top"
-          className="font-display text-xl tracking-tight text-bone hover:text-ember transition-colors"
+          href="/"
+          className="ui text-lg font-semibold tracking-[0.14em] uppercase no-underline"
         >
-          Adam Manji
+          {site.name}
         </Link>
-        <ul className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="eyebrow hover:text-bone transition-colors"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav aria-label="Main">
+          <ul className="ui -mx-2 flex flex-wrap items-center text-base">
+            {nav.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={`inline-flex min-h-11 items-center px-2 no-underline md:px-3 ${
+                      active ? "font-semibold" : "text-ink-soft hover:text-ink"
+                    }`}
+                  >
+                    <span className={active ? "mark" : undefined}>
+                      {item.label}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
