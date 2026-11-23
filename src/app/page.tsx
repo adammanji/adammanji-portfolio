@@ -20,14 +20,10 @@ export default function Home() {
             className="object-cover object-[50%_30%]"
           />
         </div>
-        <h1 className="mt-8 text-[clamp(2.5rem,10.5vw,7rem)] leading-none font-bold tracking-[0.06em] uppercase">
+        <h1 className="mt-8 text-[clamp(2.25rem,9vw,6rem)] leading-none font-bold tracking-[0.06em] uppercase">
           {site.name}
         </h1>
-        <p className="mt-7 max-w-[41rem] text-xl leading-normal md:text-2xl md:leading-[1.45]">
-          {home.lede}
-        </p>
-        <p className="mt-4 max-w-[36rem] text-lg text-ink-soft">{home.second}</p>
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <a className="btn btn-solid" href={`mailto:${site.email}`}>
             Email me
           </a>
@@ -35,6 +31,10 @@ export default function Home() {
             Read my resume
           </Link>
         </div>
+        <p className="mt-9 max-w-[41rem] text-xl leading-normal md:text-2xl md:leading-[1.45]">
+          {home.lede}
+        </p>
+        <p className="mt-4 max-w-[36rem] text-lg text-ink-soft">{home.second}</p>
       </section>
 
       {/* The record */}

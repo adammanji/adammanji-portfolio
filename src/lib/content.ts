@@ -60,18 +60,18 @@ export const record: RecordRow[] = [
   {
     years: "2023",
     name: "Bank of Montreal",
-    role: "Software engineering intern, Treasury and Payments Technology",
+    role: "Software engineering intern, Treasury and Payment Solutions",
+  },
+  {
+    years: "2021 – 2025",
+    name: "UC Berkeley",
+    role: "B.A. Computer Science",
   },
   {
     years: "2020 – 2025",
     name: "Fiverr",
     role: "Freelance full-stack and game developer",
     note: "4.9 of 5 rating",
-  },
-  {
-    years: "2021 – 2025",
-    name: "UC Berkeley",
-    role: "B.A. Computer Science",
   },
   {
     years: "2016 – 2021",
@@ -407,7 +407,7 @@ export const resume = {
     },
     {
       org: "Bank of Montreal (BMO)",
-      title: "Software Engineering Intern, Treasury & Payments Technology",
+      title: "Software Engineering Intern, Treasury & Payment Solutions",
       when: "Summer 2023",
       where: "Toronto, Canada",
       bullets: [
